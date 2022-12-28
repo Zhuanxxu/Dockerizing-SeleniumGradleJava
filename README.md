@@ -1,20 +1,18 @@
-# Selenium Test Automation Boilerplate
+# Selenium + Gradle + Java with Docker
 
-Ready-to-use UI Test Automation Architecture using Java and Selenium WebDriver. 
+This framework has a dockerfile to dockerize this app and run its test
 
 ## Installation Steps
 
-In order to use the framework:
+In order to use the framework in normal way:
 
-1. [Fork](https://github.com/Tahanima/selenium-test-automation-boilerplate/fork) the repository.
-2. Clone, i.e, download your copy of the repository to your local machine using
-```
-git clone https://github.com/[your_username]/selenium-test-automation-boilerplate.git
-```
-3. Import the project in [IntelliJ IDEA](https://www.jetbrains.com/idea/download/).
-4. Make your desired changes.
-5. Use IntelliJ IDEA to run your desired tests. Alternatively, you can use the terminal to run the tests, for example `./gradlew test -Dbrowser=firefox -Dheadless=false` to run all the tests using the firefox browser in headed mode.
+1. Use IntelliJ IDEA to run your desired tests. Alternatively, you can use the terminal to run the tests, for example `./gradlew test -Dbrowser=firefox -Dheadless=false` to run all the tests using the firefox browser in headed mode.
 
+In order to use the framework in a dcoker way:
+
+1. In the cmd use: `docker build . -t [name of the image]`
+2. `docker run --name [name of the container] --mount source=[name of the docker volume],target=[path a la carpeta que 
+queres guardar datos, por ejemplo en mi caso uso "/report" ya que guardo los reportes de tests] [name of the image]`
 ## Languages and Frameworks
 
 The project uses the following:
